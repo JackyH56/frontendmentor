@@ -1,2 +1,2 @@
 # frontendmentor
-Frontend coding challenges to refine HTML CSS and Javascript.
+Frontend coding challenges to refine HTML CSS and Javascript knowledge.
