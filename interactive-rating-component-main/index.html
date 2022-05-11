@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Rating state start -->
+  <div class="rating-card-holder" id ="rating-card-holder">
+    <div class="rating-card" id ="rating-card">
+      <img id="star" src= "images/icon-star.svg" alt="star"/>
+
+      <h1>How did we do?</h1>
+    
+      <p>Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!</p>
+        <div class="rating-buttons-container" id="rating-buttons-container">
+          <div class="rating-buttons">
+            <input type="button" id="rating1" class="rating rating1" value="1" onclick="selected(1)">
+            <input type="button" id="rating2" class="rating rating2" value="2"onclick="selected(2)">
+            <input type="button" id="rating3" class="rating rating3" value="3"onclick="selected(3)">
+            <input type="button" id="rating4" class="rating rating4" value="4"onclick="selected(4)">
+            <input type="button" id="rating5" class="rating rating5" value="5"onclick="selected(5)">
+          </div>
+          <input type="submit" id="submit-button" value="SUBMIT" onclick="submitRating()">
+        </div>
+    </div>
+  </div>
+  
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+  <div class="thank-card-holder" id ="thank-card-holder">
+
+    <div class="thank-card" id="thank-card">
+      <img id="thank-you-img" src="images/illustration-thank-you.svg" alt="illustration thank you">
+      <div class="rating-selected">You selected <span id="chosen-rating"></span> out of 5</div>
+
+      <h1>Thank you!</h1>
+
+      <p class="thanks-text">We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!</p>
+    </div>
+  </div>
+
+  <!-- Thank you state end -->
+
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="script.js"></script>
+</body>
+</html>

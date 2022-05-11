@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+  <div id="topnav" class="topnav">
+    <a href="#"><img id="logo" src="images/logo.svg" alt="Logo"></a>
+    <a onclick="handleFeaturesDropdown()" class="left-nav-item" id="features"href="#" >Features <img id="features-dropdown-icon"src="images/icon-arrow-down.svg"></a>
+    <ul id="features-dropdown-content" class="features-dropdown-content">
+      <li><a href="#"><img class="icon" src="images/icon-todo.svg">Todo List</a></li>
+      <li><a href="#"><img class="icon" src="images/icon-calendar.svg">Calendar</li></a>
+      <li><a href="#"><img class="icon" src="images/icon-reminders.svg">Reminders</li></a>
+      <li><a href="#"><img class="icon" src="images/icon-planning.svg">Planning</li></a>
+    </ul>
+    <a onclick="handleCompanyDropdown()" class="left-nav-item"href="#" >Company <img id="company-dropdown-icon" src="images/icon-arrow-down.svg"></a>
+    <ul id="company-dropdown-content" class="company-dropdown-content">
+      <li>History</li>
+      <li>Our Team</li>
+      <li>Blog</li>
+    </ul>
+    <a class="left-nav-item"href="#">Careers</a>
+    <a class="left-nav-item"href="#">About</a>
+    <a id="register-button" class="right-nav-item"href="#">Register</a>
+    <a class="right-nav-item"href="#">Login</a>
+  </div>
+  <a href="#" class="hamburger-icon" onclick="openNav()">
+    <i class="fa fa-bars"></i>
+  </a>
+
+  <div id="sidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="left-aligned-options">
+    <a onclick="handleFeaturesDropdownSideNav()" class="side-nav-item" id="features"href="#" >Features <img id="features-dropdown-icon-side"src="images/icon-arrow-down.svg"></a>
+      <ul id="features-dropdown-content-sidenav" class="features-dropdown-content-sidenav">
+        <li><a href="#"><img class="icon" src="images/icon-todo.svg">Todo List</a></li>
+        <li><a href="#"><img class="icon" src="images/icon-calendar.svg">Calendar</li></a>
+        <li><a href="#"><img class="icon" src="images/icon-reminders.svg">Reminders</li></a>
+        <li><a href="#"><img class="icon" src="images/icon-planning.svg">Planning</li></a>
+      </ul>
+      <a onclick="handleCompanyDropdownSideNav()" class="side-nav-item"href="#" >Company <img id="company-dropdown-icon-sidenav" src="images/icon-arrow-down.svg"></a>
+      <ul id="company-dropdown-content-sidenav" class="company-dropdown-content-sidenav">
+        <li><a href="#">History</a></li>
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <a class="side-nav-item"href="#">Careers</a>
+    <a class="side-nav-item"href="#">About</a>
+    <div class="center-aligned-options">
+      <a class=" bottom"href="#">Login</a>
+      <a id="register-button" class="bottom"href="#">Register</a>
+    </div>
+  </div>
+
+  <div id="main-content" class=main-content>
+    <div class="left-content">
+      <h1>Make remote work</h1>
+
+      <p>Get your team in sync, no matter your location. Streamline processes, 
+        create team rituals, and watch productivity soar.</p>
+
+      <button id="learn-more-button">Learn more</button>
+      <div class="clients">
+        <img src="images/client-databiz.svg">
+        <img src="images/client-audiophile.svg">
+        <img src="images/client-meet.svg">
+        <img src="images/client-maker.svg">
+      </div>
+    </div>
+    <div class="right-content">
+      <img id="hero-image" src="images/image-hero-desktop.png">
+      <img id="hero-image-mobile" src="images/image-hero-mobile.png">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

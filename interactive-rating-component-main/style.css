@@ -1,0 +1,122 @@
+html, body {
+    background-color: rgb(20,21,24);
+    color: rgb(211,216,215);
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+}
+.rating-card-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    height: 100%;
+}
+
+.rating-card {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgb(29,36,45);
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 5%;
+    margin: 10px;
+
+}
+
+#star {
+    background-color: rgb(32,42,50);
+    border: none;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+}
+p {
+    color: rgb(101,107,117);
+}
+.rating-buttons-container {
+    width:100%;
+}
+.rating-buttons {
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.rating {
+    background-color: rgb(32,42,50);
+    border: none;
+    color: rgb(101,107,117);
+    border-radius: 50%;
+    padding: 20px;
+    text-align: center;
+}
+
+.rating:hover {
+    background-color: rgb(255,96,0);
+    cursor: pointer;
+    color: white;
+}
+
+.rating:focus {
+    background-color: rgb(111,124,143);
+    color: white;
+}
+
+#submit-button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    padding:10px;    
+    background-color: rgb(255,96,0);
+    color: white;
+
+}
+
+#submit-button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: rgb(255,96,0);
+}
+
+.thank-card-holder {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    height: 100%;
+}
+
+.thank-card {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(29,36,45);
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 5%;
+}
+
+#thank-you-img {
+    margin-bottom: 20px;
+}
+
+.rating-selected {
+    background-color: rgb(32,42,50);
+    color: rgb(255,96,0);
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+
+.thanks-text {
+    text-align: center;
+}
