@@ -11,38 +11,35 @@ body {
 .card {
   background-color: hsl(0deg, 0%, 100%);
   text-align: center;
-  border-radius: 20px;
-  width: 25vw;
+  border-radius: 1.25rem;
+  width: 85%;
+  min-width: 22rem;
+  box-shadow: 0 0.25rem 1.25rem 0.25rem rgba(31, 50, 81, 0.15);
 }
-
-.card-content {
-  padding: 30px;
+@media screen and (min-width: 600px) {
+  .card {
+    width: 25vw;
+  }
 }
-
-img {
+.card__content {
+  padding: 1.25rem;
+}
+.card__image {
   object-fit: contain;
-  border-radius: 20px;
+  border-radius: 0.625rem;
   max-width: 100%;
 }
-
-.text-container {
-  padding: 20px 10px;
+.card__text-container {
+  padding: 0.25rem 0.625rem;
 }
-
-h2 {
+.card__title {
   font-weight: 700;
+  color: hsl(218deg, 44%, 22%);
 }
-
-p {
+.card__description {
   font-weight: 400;
-  font-size: 15px;
+  font-size: 1rem;
   color: hsl(220deg, 15%, 55%);
-}
-
-@media screen and (max-width: 600px) {
-  .card {
-    width: 85%;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */

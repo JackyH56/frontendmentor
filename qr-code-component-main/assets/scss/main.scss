@@ -3,9 +3,9 @@ $light-gray: hsl(212, 45%, 89%);
 $grayish-blue: hsl(220, 15%, 55%);
 $dark-blue: hsl(218, 44%, 22%);
 
-$font-size-paragraph: 15px;
+$font-size-paragraph: 1rem;
 
-$font-family: 'Outfit', sans-serif;
+$font-family: "Outfit", sans-serif;
 $font-weight-light: 400;
 $font-weight-bold: 700;
 
@@ -18,39 +18,41 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .card {
   background-color: $white;
   text-align: center;
-  border-radius: 20px;
-  width: 25vw;
-}
+  border-radius: 1.25rem;
+  width: 85%;
+  min-width: 22rem;
+  box-shadow: 0 0.25rem 1.25rem 0.25rem rgba($dark-blue, 0.15);
 
-.card-content {
-  padding: 30px;
-}
+  @media screen and (min-width: 600px) {
+    width: 25vw;
+  }
 
-img{
-  object-fit: contain;
-  border-radius: 20px;
-  max-width: 100%;
-}
+  &__content {
+    padding: 1.25rem;
+  }
 
-.text-container {
-  padding: 20px 10px;
-}
+  &__image {
+    object-fit: contain;
+    border-radius: 0.625rem;
+    max-width: 100%;
+  }
 
-h2 {
-  font-weight: $font-weight-bold;
-}
+  &__text-container {
+    padding: 0.25rem 0.625rem;
+  }
 
-p {
-  font-weight: $font-weight-light;
-  font-size: $font-size-paragraph;
-  color: $grayish-blue;
-}
+  &__title {
+    font-weight: $font-weight-bold;
+    color: $dark-blue;
+  }
 
-@media screen and (max-width: 600px) {
-  .card {
-      width: 85%;
+  &__description {
+    font-weight: $font-weight-light;
+    font-size: $font-size-paragraph;
+    color: $grayish-blue;
   }
 }
