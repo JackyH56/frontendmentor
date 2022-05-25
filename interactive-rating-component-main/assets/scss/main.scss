@@ -1,8 +1,18 @@
+$orange: hsl(25, 97%, 53%);
+$white: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$medium-grey: hsl(216, 12%, 54%);
+$dark-grey: hsl(214, 12%, 23%);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);
+
+$font-family: "Overpass", sans-serif;
+$font-size: 0.96rem;
+
 html,
 body {
-  background-color: rgb(20, 21, 24);
-  color: rgb(211, 216, 215);
-  font-family: "Roboto", sans-serif;
+  background-color: $very-dark-blue;
+  font-family: $font-family;
   height: 100vh;
 }
 .rating-card {
@@ -17,7 +27,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background-color: rgb(29, 36, 45);
+    background-color: $dark-blue;
     flex-direction: column;
     padding: 1.875rem;
     border-radius: 5%;
@@ -25,15 +35,20 @@ body {
   }
 
   &__star {
-    background-color: rgb(32, 42, 50);
+    background-color: $dark-grey;
     border: none;
-    color: white;
     border-radius: 50%;
-    padding: 0.625rem;
-    text-align: center;
+    padding: 0.75rem;
   }
   &__title {
-    color: rgb(101, 107, 117);
+    color: $white;
+    margin: 1.5rem 0 0;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  &__description {
+    color: $medium-grey;
+    font-size: $font-size;
   }
   &__buttons-container {
     width: 100%;
@@ -45,23 +60,25 @@ body {
     margin: 1.875rem 0;
   }
 
-  &__rating {
-    background-color: rgb(32, 42, 50);
-    border: none;
-    color: rgb(101, 107, 117);
+  &__button {
+    background-color: $dark-grey;
+    color: $light-grey;
+    width: 3rem;
+    line-height: 3rem;
     border-radius: 50%;
-    padding: 1.25rem;
+    border: none;
     text-align: center;
+    font-size: 1rem;
 
     &:hover {
-      background-color: rgb(255, 96, 0);
+      background-color: $orange;
       cursor: pointer;
-      color: white;
+      color: $white;
     }
 
     &:focus {
-      background-color: rgb(111, 124, 143);
-      color: white;
+      background-color: $medium-grey;
+      color: $white;
     }
   }
 
@@ -73,13 +90,13 @@ body {
     border-radius: 1.25rem;
     text-align: center;
     padding: 0.625rem;
-    background-color: rgb(255, 96, 0);
-    color: white;
+    background-color: $orange;
+    color: $white;
 
     &:hover {
       cursor: pointer;
-      background-color: white;
-      color: rgb(255, 96, 0);
+      background-color: $white;
+      color: $orange;
     }
   }
 }
@@ -96,7 +113,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(29, 36, 45);
+    background-color: $dark-blue;
     flex-direction: column;
     padding: 1.875rem;
     border-radius: 5%;
@@ -107,13 +124,22 @@ body {
   }
 
   &__rating-selected {
-    background-color: rgb(32, 42, 50);
-    color: rgb(255, 96, 0);
+    background-color: $dark-grey;
+    color: $orange;
     border-radius: 1.25rem;
+    margin-top: 0.75rem;
     padding: 0.625rem 1.25rem;
   }
 
+  &__title {
+    color: $white;
+    font-size: 1.75rem;
+    padding: 2rem 0 0.75rem 0;
+  }
+
   &__description {
+    color: $medium-grey;
+    font-size: $font-size;
     text-align: center;
   }
 }

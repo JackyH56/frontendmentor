@@ -1,14 +1,8 @@
-const submit = document.getElementById("submit-button");
+const submit = document.querySelector(".submit-button");
 
-const form = document.getElementById("form");
-const ratingCardHolder = document.getElementById("rating-card-holder");
-const thankCardHolder = document.getElementById("thank-card-holder");
-const button1 = document.getElementById("rating1");
-const button2 = document.getElementById("rating2");
-const button3 = document.getElementById("rating3");
-const button4 = document.getElementById("rating4");
-const button5 = document.getElementById("rating5");
-const buttons = [button1, button2, button3, button4, button5];
+const form = document.querySelector(".form");
+const ratingCardHolder = document.querySelector(".rating-card");
+const thankCardHolder = document.querySelector(".thank-card");
 
 let selection = 0;
 
@@ -18,7 +12,7 @@ function submitRating() {
   } else {
     ratingCardHolder.style.display = "none";
     thankCardHolder.style.display = "flex";
-    document.getElementById("chosen-rating").innerHTML = selection;
+    document.querySelector(".chosen-rating").innerHTML = selection;
   }
 }
 
