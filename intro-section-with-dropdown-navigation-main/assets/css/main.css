@@ -1,0 +1,311 @@
+html,
+body {
+  background-color: hsl(0deg, 0%, 98%);
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Epilogue", sans-serif;
+}
+
+.topnav {
+  display: block;
+  box-sizing: border-box;
+  background-color: hsl(0deg, 0%, 98%);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+.topnav__logo {
+  float: left;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5rem;
+  margin: 0 2rem;
+  vertical-align: baseline;
+}
+.topnav a {
+  color: hsl(0deg, 0%, 41%);
+  text-align: center;
+  padding: 0.5rem 1.25rem;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.topnav a:hover {
+  font-weight: bold;
+}
+.topnav__left-item {
+  float: left;
+}
+.topnav__right-item {
+  float: right;
+}
+.topnav__features-dropdown-content {
+  background-color: hsl(0deg, 0%, 98%);
+  position: absolute;
+  left: 6.25rem;
+  margin-top: 2rem;
+  padding: 1.825rem;
+  display: none;
+  flex-direction: column;
+  border-radius: 0.25rem;
+  box-shadow: 0.25rem 0.25rem 1rem hsl(0deg, 0%, 41%);
+  list-style: none;
+  text-align: left;
+  row-gap: 0.625rem;
+}
+.topnav__features-dropdown-content a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 8%);
+}
+.topnav__icon {
+  margin-right: 1.25rem;
+}
+.topnav__company-dropdown-content {
+  display: none;
+  background-color: hsl(0deg, 0%, 98%);
+  position: absolute;
+  left: 1.875rem;
+  margin-top: 2rem;
+  padding: 1.875rem;
+  flex-direction: column;
+  border-radius: 0.25rem;
+  box-shadow: 0.25rem 0.25rem hsl(0deg, 0%, 41%);
+  list-style: none;
+  text-align: left;
+  row-gap: 0.625rem;
+}
+.topnav__register-button {
+  border: solid;
+  border-radius: 0.75rem;
+  margin-right: 2rem;
+}
+.topnav__register-button:hover {
+  border-width: 0.125rem;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-content {
+  width: 50%;
+  box-sizing: border-box;
+  max-height: 100%;
+  padding: 8rem 6rem 0;
+}
+.left-content__title {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 5rem;
+}
+.left-content__description {
+  font-size: 1.25rem;
+  color: hsl(0deg, 0%, 41%);
+  margin-top: 3rem;
+}
+.left-content__learn-more-button {
+  background-color: hsl(0deg, 0%, 8%);
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.left-content__learn-more-button:hover {
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(0deg, 0%, 8%);
+}
+.left-content__clients {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  height: auto;
+  margin-top: 6rem;
+}
+.left-content__clients img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero {
+  max-width: 40%;
+  box-sizing: border-box;
+  max-height: 100%;
+  padding: 50px;
+}
+.hero__desktop {
+  max-width: 100%;
+  object-fit: fill;
+  height: auto;
+}
+.hero__mobile {
+  display: none;
+}
+
+.hamburger-icon {
+  display: none;
+}
+
+.sidenav {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
+  .hamburger-icon {
+    display: block;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+  }
+
+  .sidenav {
+    height: 100%;
+    display: block;
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: hsl(0deg, 0%, 98%);
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+  }
+  .sidenav__side-nav-item {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    margin-bottom: 20px;
+    transition: 0.3s;
+  }
+  .sidenav__closebtn {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    z-index: 9999;
+    font-size: 80px;
+    text-decoration: none;
+    color: black;
+  }
+  .sidenav__left-aligned-options {
+    margin-top: 120px;
+  }
+  .sidenav__features-dropdown-content {
+    display: none;
+    list-style: none;
+  }
+  .sidenav__features-dropdown-content li {
+    margin-bottom: 10px;
+  }
+  .sidenav__features-dropdown-content a {
+    text-decoration: none;
+    font-size: 25px;
+    color: hsl(0deg, 0%, 41%);
+  }
+  .sidenav__company-dropdown-content {
+    list-style: none;
+    display: none;
+  }
+  .sidenav__company-dropdown-content li {
+    margin-bottom: 10px;
+  }
+  .sidenav__company-dropdown-content a {
+    text-decoration: none;
+    font-size: 25px;
+    color: hsl(0deg, 0%, 41%);
+  }
+  .sidenav__center-aligned-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .sidenav__center-aligned-options a {
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+    color: hsl(0deg, 0%, 8%);
+  }
+  .sidenav__register-button {
+    padding: 10px 50px;
+  }
+
+  /* Content start */
+  .main-content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+  }
+
+  h1 {
+    font-size: 5vh;
+  }
+
+  p {
+    font-size: 2.5vh;
+    color: hsl(0deg, 0%, 41%);
+  }
+
+  #learn-more-button {
+    background-color: hsl(0deg, 0%, 8%);
+    color: hsl(0deg, 0%, 98%);
+    padding: 20px 40px;
+    border-radius: 15px;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
+  .left-content {
+    display: block;
+    top: 45%;
+    width: 100%;
+    box-sizing: border-box;
+    max-height: 100%;
+    text-align: center;
+    padding: 50px 10px;
+  }
+
+  .right-content {
+    position: relative;
+    max-width: 100%;
+    top: 70px;
+    left: 0;
+    padding: 0;
+  }
+
+  .clients {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    height: auto;
+  }
+
+  #hero-image {
+    display: none;
+  }
+
+  #hero-image-mobile {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
