@@ -48,10 +48,10 @@
 
   <div class="sidenav">
     <a href="javascript:void(0)" class="sidenav__closebtn" onclick="closeNav()">&times;</a>
-    <div class="sidenav__left-aligned-links">
+    <div class="sidenav__left-aligned-options">
       <a onclick="handleFeaturesDropdownSideNav()" class="sidenav__item sidenav__features" href="#">Features <img
-          id="sidenav__features-dropdown-icon" src="images/icon-arrow-down.svg"></a>
-      <ul id="sidenav__features-dropdown-content" class="sidenav__features-dropdown-content">
+          class="sidenav__features-dropdown-icon" src="images/icon-arrow-down.svg"></a>
+      <ul class="sidenav__features-dropdown-content" class="sidenav__features-dropdown-content">
         <li><a href="#"><img class="sidenav__icon" src="images/icon-todo.svg">Todo List</a></li>
         <li><a href="#"><img class="sidenav__icon" src="images/icon-calendar.svg">Calendar</li></a>
         <li><a href="#"><img class="sidenav__icon" src="images/icon-reminders.svg">Reminders</li></a>
@@ -73,19 +73,19 @@
     </div>
   </div>
 
-  <div id="content" class=main-content>
+  <div class=main-content>
     <div class="left-content">
       <span class="left-content__title">Make remote work</span>
 
-      <p class="content__description">Get your team in sync, no matter your location. Streamline processes,
+      <p class="left-content__description">Get your team in sync, no matter your location. Streamline processes,
         create team rituals, and watch productivity soar.</p>
 
       <button class="left-content__learn-more-button">Learn more</button>
       <div class="left-content__clients">
-        <img class="left-content__client" src="images/client-databiz.svg">
-        <img class="left-content__client" src="images/client-audiophile.svg">
-        <img class="left-content__client" src="images/client-meet.svg">
-        <img class="left-content__client" src="images/client-maker.svg">
+        <div class="left-content__client"><img  src="images/client-databiz.svg"></div>
+        <div class="left-content__client"><img src="images/client-audiophile.svg"></div>
+        <div class="left-content__client"><img src="images/client-meet.svg"></div>
+        <div class="left-content__client"><img  src="images/client-maker.svg"></div>
       </div>
     </div>
     <div class="hero">

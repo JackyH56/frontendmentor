@@ -2,8 +2,10 @@ let featuresMenuOpen = false;
 let companyMenuOpen = false;
 
 function handleFeaturesDropdown() {
-  let dropdownIcon = document.querySelector(".features-dropdown-icon");
-  let dropdownContent = document.querySelector(".features-dropdown-content");
+  let dropdownIcon = document.querySelector(".topnav__features-dropdown-icon");
+  let dropdownContent = document.querySelector(
+    ".topnav__features-dropdown-content"
+  );
 
   if (featuresMenuOpen) {
     dropdownIcon.src = "images/icon-arrow-down.svg";
@@ -17,13 +19,13 @@ function handleFeaturesDropdown() {
 }
 
 function handleFeaturesDropdownSideNav() {
-  let dropdownIcon = document.querySelector(".features-dropdown-icon-side");
+  let dropdownIcon = document.querySelector(".sidenav__features-dropdown-icon");
   let dropdownContent = document.querySelector(
-    ".features-dropdown-content-sidenav"
+    ".sidenav__features-dropdown-content"
   );
 
   if (featuresMenuOpen) {
-    dropdownIcon.src = ".images/icon-arrow-down.svg";
+    dropdownIcon.src = "images/icon-arrow-down.svg";
     featuresMenuOpen = false;
     dropdownContent.style.display = "none";
   } else {
@@ -34,8 +36,10 @@ function handleFeaturesDropdownSideNav() {
 }
 
 function handleCompanyDropdown() {
-  let dropdownIcon = document.querySelector(".company-dropdown-icon");
-  let dropdownContent = document.querySelector(".company-dropdown-content");
+  let dropdownIcon = document.querySelector(".topnav__company-dropdown-icon");
+  let dropdownContent = document.querySelector(
+    ".topnav__company-dropdown-content"
+  );
   console.log(dropdownIcon);
   console.log(dropdownContent);
   if (companyMenuOpen) {
@@ -50,9 +54,9 @@ function handleCompanyDropdown() {
 }
 
 function handleCompanyDropdownSideNav() {
-  let dropdownIcon = document.querySelector(".company-dropdown-icon-sidenav");
+  let dropdownIcon = document.querySelector(".sidenav__company-dropdown-icon");
   let dropdownContent = document.querySelector(
-    "company-dropdown-content-sidenav"
+    ".sidenav__company-dropdown-content"
   );
   console.log(dropdownIcon);
   console.log(dropdownContent);
@@ -69,7 +73,7 @@ function handleCompanyDropdownSideNav() {
 
 /* Set the width of the side navigation to 250px */
 function openNav() {
-  document.querySelector(".sidenav").style.width = "250px";
+  document.querySelector(".sidenav").style.width = "15rem";
 }
 
 /* Set the width of the side navigation to 0 */

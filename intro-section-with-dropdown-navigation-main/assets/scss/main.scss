@@ -14,6 +14,8 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: $font-family;
+  padding: 0;
+  margin: 0;
 }
 
 .topnav {
@@ -32,7 +34,7 @@ body {
     width: fit-content;
     height: fit-content;
     padding: 0.5rem;
-    margin: 0 2rem;
+    margin: 0 1rem;
     vertical-align: baseline;
   }
 
@@ -143,8 +145,6 @@ body {
   &__clients {
     display: flex;
     justify-content: space-between;
-    max-width: 100%;
-    height: auto;
     margin-top: 6rem;
   }
 
@@ -159,7 +159,7 @@ body {
   max-width: 40%;
   box-sizing: border-box;
   max-height: 100%;
-  padding: 50px;
+  padding: 3rem;
 
   &__desktop {
     max-width: 100%;
@@ -181,6 +181,10 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
   .topnav {
     a:not(:first-child) {
       display: none; //Keep only the logo in top nav
@@ -190,8 +194,8 @@ body {
   .hamburger-icon {
     display: block;
     position: absolute;
-    right: 2rem;
-    top: 2rem;
+    right: 1.5rem;
+    top: 1.5rem;
   }
   .sidenav {
     height: 100%;
@@ -205,13 +209,12 @@ body {
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 
-    &__side-nav-item {
-      padding: 8px 8px 8px 32px;
+    &__item {
+      padding: 0.5rem 0.5rem 0.5rem 2rem;
       text-decoration: none;
-      font-size: 25px;
+      font-size: 1.125rem;
       color: #818181;
       display: block;
-      margin-bottom: 20px;
       transition: 0.3s;
     }
 
@@ -219,15 +222,15 @@ body {
       display: block;
       position: absolute;
       top: 0;
-      right: 30px;
+      right: 1rem;
       z-index: 9999;
-      font-size: 80px;
+      font-size: 5rem;
       text-decoration: none;
       color: black;
     }
 
     &__left-aligned-options {
-      margin-top: 120px;
+      margin-top: 5rem;
     }
 
     &__features-dropdown-content {
@@ -236,13 +239,16 @@ body {
     }
 
     &__features-dropdown-content li {
-      margin-bottom: 10px;
+      margin-bottom: 1.25rem;
     }
 
     &__features-dropdown-content a {
       text-decoration: none;
-      font-size: 25px;
       color: $medium-gray;
+    }
+
+    &__icon {
+      margin-right: 0.75rem;
     }
 
     &__company-dropdown-content {
@@ -251,12 +257,11 @@ body {
     }
 
     &__company-dropdown-content li {
-      margin-bottom: 10px;
+      margin-bottom: 0.625rem;
     }
 
     &__company-dropdown-content a {
       text-decoration: none;
-      font-size: 25px;
       color: $medium-gray;
     }
 
@@ -268,17 +273,17 @@ body {
     }
 
     &__center-aligned-options a {
-      font-size: 20px;
-      padding: 10px;
+      font-size: 1.25rem;
+      padding: 0.625rem;
       text-decoration: none;
-      color: $almost-black;
+      color: $medium-gray;
     }
 
     &__register-button {
-      padding: 10px 50px;
+      padding: 0.625rem 3.5rem !important;
+      border: 0.125rem solid $almost-black;
+      border-radius: 0.75rem;
     }
-
-
   }
   /* Content start */
   .main-content {
@@ -289,55 +294,61 @@ body {
     height: max-content;
   }
 
-  h1 {
-    font-size: 5vh;
-  }
-
-  p {
-    font-size: 2.5vh;
-    color: $medium-gray;
-  }
-
-  #learn-more-button {
-    background-color: $almost-black;
-    color: $almost-white;
-    padding: 20px 40px;
-    border-radius: 15px;
-    margin-top: 0;
-    margin-bottom: 50px;
-  }
-
   .left-content {
     display: block;
-    top: 45%;
     width: 100%;
     box-sizing: border-box;
-    max-height: 100%;
     text-align: center;
-    padding: 50px 10px;
+    padding: 6rem 1rem;
+
+    &__title {
+      font-size: 2.125rem;
+    }
+    &__description {
+      font-size: 1rem;
+      line-height: 1.75rem;
+      color: $medium-gray;
+      margin: 0 0 1rem;
+    }
+
+    &__learn-more-button {
+      background-color: $almost-black;
+      color: $almost-white;
+      font-size: 1rem;
+      padding: 0.9rem 1.5rem;
+      border-radius: 1rem;
+      margin-top: 0rem;
+      margin-bottom: 3rem;
+    }
+    &__clients {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    &__client {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      padding: 1rem;
+    }
   }
-  .right-content {
+
+  .hero {
     position: relative;
     max-width: 100%;
-    top: 70px;
+    top: 4rem;
     left: 0;
     padding: 0;
-  }
 
-  .clients {
-    display: flex;
-    justify-content: space-between;
-    max-width: 100%;
-    height: auto;
-  }
+    &__desktop {
+      display: none;
+    }
 
-  #hero-image {
-    display: none;
-  }
-
-  #hero-image-mobile {
-    display: block;
-    max-width: 100%;
-    height: auto;
+    &__mobile {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
   }
 }
