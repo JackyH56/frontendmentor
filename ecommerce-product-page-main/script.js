@@ -5,21 +5,21 @@ let photoIndex = 0;
 
 const cartBtn = document.querySelector(".nav__cart");
 const addToCartBtn = document.querySelector(".text-content__add-to-cart");
-const deleteBtn = document.querySelector(".cart-card__item__product-delete");
-const badge = document.querySelector(".nav__cart-wrapper__badge");
+const deleteBtn = document.querySelector(".cart-card__product-delete");
+const badge = document.querySelector(".nav__cart-badge");
 const cartCard = document.querySelector(".cart-card");
 const counter = document.querySelector(".text-content__num-items");
 const cardDescription = document.querySelector(".cart-card__description");
 const cardItem = document.querySelector(".cart-card__item");
-const checkoutBtn = document.querySelector(".cart-card__item__checkout");
+const checkoutBtn = document.querySelector(".cart-card__checkout");
 const productQty = document.querySelector(
-  ".cart-card__item__description__product-quantity"
+  ".cart-card__product-quantity"
 );
 const thumbnails = document.querySelectorAll(".product-content__thumbnail");
 const carouselThumbnails = document.querySelectorAll(".carousel__thumbnail");
 const dimmer = document.querySelector(".dimmer");
 const total = document.querySelector(
-  ".cart-card__item__description__product-total"
+  ".cart-card__product-total"
 );
 const carousel = document.querySelector(".carousel");
 const closeBtn = document.querySelector(".carousel__close");
