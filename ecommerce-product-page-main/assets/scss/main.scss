@@ -1,3 +1,12 @@
+$orange: hsl(26, 100%, 55%);
+$pale-orange: hsl(25, 100%, 94%);
+$very-dark-blue: hsl(220, 13%, 13%);
+$dark-grayish-blue: hsl(219, 9%, 45%);
+$grayish-blue: hsl(220, 14%, 75%);
+$light-grayish-blue: hsl(223, 64%, 98%);
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+
 html,
 body {
   padding: 0;
@@ -5,6 +14,18 @@ body {
   box-sizing: border-box;
   font-family: "Kumbh Sans", sans-serif;
   height: 100vh;
+  @media screen and (max-width: 56.25rem) {
+    margin: 0;
+  }
+}
+
+.mobile {
+  @media screen and (max-width: 56.25rem) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .dimmer {
@@ -18,28 +39,76 @@ body {
   height: 100%;
   z-index: 100;
 }
+.sidenav {
+  height: 100%;
+  display: block;
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background-color: $white;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+
+  &__link {
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    text-decoration: none;
+    font-size: 1.125rem;
+    color: $black;
+    font-weight: 700;
+    display: block;
+    transition: 0.3s;
+  }
+
+  &__close {
+    border: none;
+    background-color: $white;
+    color: $dark-grayish-blue;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+}
 
 .nav {
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
-  @media screen and (min-width: 600px) {
-    width: 25vw;
-  }
 
+  &__hamburger-icon {
+    display: none;
+    padding-left: 1rem;
+  }
   &__left {
     display: flex;
     align-items: center;
   }
+  @media screen and (max-width: 56.25rem) {
+    width: 100vw;
+
+    &__left-link:not(:first-child) {
+      display: none; //Keep only the logo in top nav
+    }
+
+    &__logo {
+      margin: 0;
+      padding: 0;
+    }
+
+    &__hamburger-icon {
+      display: block;
+    }
+  }
+
   &__left-link {
     float: left;
     display: block;
     text-align: center;
     padding: 0.875rem 1rem;
     text-decoration: none;
-    color: hsl(220, 14%, 75%);
+    color: $grayish-blue;
   }
 
   &__right {
@@ -55,6 +124,9 @@ body {
     position: relative;
     padding-right: 0.5rem;
     padding-top: 0.25rem;
+    @media screen and (max-width: 56.25rem) {
+      padding: 0;
+    }
   }
 
   &__cart-badge {
@@ -63,8 +135,8 @@ body {
     padding: 0.00625rem 0.5rem;
     font-size: xx-small;
     border-radius: 0.5rem;
-    color: hsl(223, 64%, 98%);
-    background-color: hsl(26, 100%, 55%);
+    color: $light-grayish-blue;
+    background-color: $orange;
     top: 0;
     right: 0;
   }
@@ -72,13 +144,20 @@ body {
   &__profile {
     height: auto;
     width: 2.5rem;
+
+    @media screen and (max-width: 56.25rem) {
+      width: 1.25rem;
+    }
   }
 }
 
 hr {
   width: 100%;
   border: 0;
-  border-top: 0.0625rem solid hsl(220, 14%, 95%);
+  border-top: 0.0625rem solid $light-grayish-blue;
+  @media screen and (max-width: 56.25rem) {
+    display: none;
+  }
 }
 
 .cart-card {
@@ -88,10 +167,20 @@ hr {
   height: 10rem;
   border-radius: 0.5rem;
   position: absolute;
-  box-shadow: 0 2rem 3rem 0 rgba(black, 0.2);
+  box-shadow: 0 2rem 3rem 0 rgba($black, 0.2);
   top: 4rem;
   right: 6rem;
   padding: 1rem;
+  z-index: 101;
+
+  @media screen and (max-width: 56.25rem) {
+    width: 17rem;
+    right: 0.5rem;
+  }
+
+  &__title {
+    font-weight: 700;
+  }
 
   &__empty {
     display: block;
@@ -115,10 +204,10 @@ hr {
   &__description {
     margin-left: 0.75rem;
     font-size: 0.75rem;
-    color: hsl(220, 14%, 75%);
+    color: $grayish-blue;
   }
   &__product-total {
-    color: hsl(0, 0%, 0%);
+    color: $black;
     font-weight: 700;
   }
   &__product-delete {
@@ -129,9 +218,9 @@ hr {
     display: none;
     width: 100%;
     height: 3rem;
-    background-color: hsl(26, 100%, 55%);
+    background-color: $orange;
     border-radius: 0.5rem;
-    color: hsl(223, 64%, 98%);
+    color: $light-grayish-blue;
     border: none;
 
     &:hover {
@@ -140,12 +229,132 @@ hr {
     }
   }
 }
+.carousel {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+
+  @media screen and (max-width: 56.25rem) {
+    display: block;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: translate(0);
+    z-index: 0;
+  }
+
+  &__close {
+    background: none;
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    border: none;
+    color: $white;
+    font-size: 2rem;
+    cursor: pointer;
+
+    @media screen and (max-width: 56.25rem) {
+      display: none;
+    }
+  }
+  &__spotlight-image-container {
+    width: 75%;
+    height: auto;
+    margin: auto;
+    border-radius: 1rem;
+    position: relative;
+    @media screen and (max-width: 56.25rem) {
+      width: 100%;
+    }
+  }
+  &__spotlight-image {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+
+    @media screen and (max-width: 56.25rem) {
+      border-radius: 0;
+      object-fit: cover;
+      width: 100vw;
+      height: 42vh;
+    }
+  }
+  &__previous {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    left: -1.5rem;
+    top: 50%;
+    transform: translatey(-50%);
+    z-index: 102;
+    background-color: $light-grayish-blue;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @media screen and (max-width: 56.25rem) {
+      left: 1rem;
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+  }
+
+  &__next {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    right: -1.5rem;
+    top: 50%;
+    transform: translatey(-50%);
+    z-index: 102;
+    background-color: $light-grayish-blue;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @media screen and (max-width: 56.25rem) {
+      right: 1rem;
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+  }
+
+  &__thumbnails {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    align-items: center;
+    margin: auto;
+    width: 75%;
+
+    @media screen and (max-width: 56.25rem) {
+      display: none;
+    }
+  }
+  &__thumbnail {
+    max-width: 12%;
+    height: auto;
+    border-radius: 10%;
+    margin: 0 1rem;
+    cursor: pointer;
+  }
+  &__thumbnail--active {
+    opacity: 0.5;
+  }
+}
 
 .product-content {
   float: left;
   width: 40%;
   height: 100%;
   margin: 5rem 5rem 0;
+
+  @media screen and (max-width: 56.25rem) {
+    display: none;
+  }
 
   &__spotlight img {
     max-width: 100%;
@@ -172,7 +381,7 @@ hr {
     }
   }
   &__thumbnail--active {
-    border: 0.25rem solid hsl(26, 100%, 55%);
+    border: 0.25rem solid $orange;
     opacity: 0.5;
   }
 }
@@ -183,21 +392,38 @@ hr {
   width: 40%;
   margin-top: 8rem;
 
+  @media screen and (max-width: 56.25rem) {
+    float: none;
+    width: 90%;
+    margin: 0;
+  }
+
   &__brand {
-    color: hsl(26, 100%, 55%);
+    color: $orange;
     font-size: 1.125rem;
     font-weight: 600;
+    @media screen and (max-width: 56.25rem) {
+      font-size: 1rem;
+    }
   }
 
   &__title {
-    color: hsl(0, 0%, 0%);
+    color: $black;
     font-weight: 800;
     font-size: 3rem;
+    @media screen and (max-width: 56.25rem) {
+      font-size: 1.6rem;
+      margin: 0;
+    }
   }
 
   &__description {
-    color: hsl(220, 14%, 75%);
-    margin-bottom: 2rem;
+    color: $grayish-blue;
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: 56.25rem) {
+      font-size: 0.95rem;
+    }
   }
 
   &__sale-container {
@@ -213,9 +439,9 @@ hr {
   }
 
   &__sale-percentage {
-    background-color: hsl(25, 100%, 94%);
+    background-color: $pale-orange;
     padding: 0.125rem 0.5rem;
-    color: hsl(26, 100%, 55%);
+    color: $orange;
     font-weight: 800;
     border-radius: 0.5rem;
     margin: 0 1.25rem 0.625rem 0;
@@ -223,14 +449,21 @@ hr {
 
   &__original-price {
     text-decoration: line-through;
-    color: hsl(220, 14%, 75%);
-    margin-bottom: 1.5rem;
+    color: $grayish-blue;
+    margin: 0 1.25rem 0.625rem 0;
+
+    @media screen and (max-width: 56.25rem) {
+      margin: 0 0 0.625rem auto;
+    }
   }
 
   &__item-cart-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    @media screen and (max-width: 56.25rem) {
+      flex-direction: column;
+    }
   }
 
   &__quantity-picker {
@@ -238,25 +471,33 @@ hr {
     justify-content: flex-start;
     align-items: stretch;
     height: 3rem;
+    @media screen and (max-width: 56.25rem) {
+      width: 100%;
+    }
   }
 
   &__minus {
     cursor: pointer;
-    background-color: hsl(223, 64%, 98%);
+    background-color: $light-grayish-blue;
     border: none;
+    padding-left: 1rem;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
   }
 
   &__plus {
     cursor: pointer;
-    background-color: hsl(223, 64%, 98%);
+    background-color: $light-grayish-blue;
     border: none;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
+    padding-right: 1rem;
     user-select: none;
-
     margin-right: 0.625rem;
+
+    @media screen and (max-width: 56.25rem) {
+      margin: 0;
+    }
   }
 
   &__num-items {
@@ -265,10 +506,13 @@ hr {
     line-height: 1.875rem;
     font-size: 1.25rem;
     text-align: center;
-    background-color: hsl(223, 64%, 98%);
+    background-color: $light-grayish-blue;
     appearance: none;
     outline: 0;
-    color: black;
+    color: $black;
+    @media screen and (max-width: 56.25rem) {
+      width: 100%;
+    }
   }
 
   input[type="number"]::-webkit-inner-spin-button,
@@ -279,20 +523,23 @@ hr {
   }
 
   &__add-to-cart {
-    background-color: hsl(26, 100%, 55%);
+    background-color: $orange;
     width: 100%;
     border: none;
     border-radius: 0.5rem;
     padding: 0.75rem;
-    color: white;
+    color: $white;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 1rem 2rem -0.5rem rgba(hsl(26, 100%, 55%), 0.5);
+    box-shadow: 0 1rem 2rem -0.5rem rgba($orange, 0.5);
 
     &:hover {
       opacity: 0.5;
+    }
+    @media screen and (max-width: 56.25rem) {
+      margin-top: 1rem;
     }
   }
 
@@ -300,83 +547,5 @@ hr {
     filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
       hue-rotate(325deg) brightness(112%) contrast(101%);
     margin-right: 0.625rem;
-  }
-}
-
-.carousel {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100;
-
-  &__close {
-    background: none;
-    position: absolute;
-    top: -3rem;
-    right: 0;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-  }
-  &__spotlight-image-container {
-    width: 75%;
-    height: auto;
-    margin: auto;
-    border-radius: 1rem;
-    position: relative;
-  }
-  &__spotlight-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 1rem;
-  }
-  &__previous {
-    position: absolute;
-    width: 1rem;
-    height: 1rem;
-    left: -1.5rem;
-    top: 50%;
-    transform: translatey(-50%);
-    z-index: 102;
-    background-color: hsl(223, 64%, 98%);
-    padding: 1rem;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-
-  &__next {
-    position: absolute;
-    width: 1rem;
-    height: 1rem;
-    right: -1.5rem;
-    top: 50%;
-    transform: translatey(-50%);
-    z-index: 102;
-    background-color: hsl(223, 64%, 98%);
-    padding: 1rem;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-
-  &__thumbnails {
-    display: flex;
-    justify-content: center;
-    padding-top: 1rem;
-    align-items: center;
-    margin: auto;
-    width: 75%;
-  }
-  &__thumbnail {
-    max-width: 12%;
-    height: auto;
-    border-radius: 10%;
-    margin: 0 1rem;
-    cursor: pointer;
-  }
-  &__thumbnail--active {
-    opacity: 0.5;
   }
 }

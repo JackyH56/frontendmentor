@@ -1,7 +1,7 @@
 let cartOpen = false;
 let itemsInCart = 0;
 let itemsInCounter = 1;
-let photoIndex = 0;
+let photoIndex = 1;
 
 const cartBtn = document.querySelector(".nav__cart");
 const addToCartBtn = document.querySelector(".text-content__add-to-cart");
@@ -9,18 +9,14 @@ const deleteBtn = document.querySelector(".cart-card__product-delete");
 const badge = document.querySelector(".nav__cart-badge");
 const cartCard = document.querySelector(".cart-card");
 const counter = document.querySelector(".text-content__num-items");
-const cardDescription = document.querySelector(".cart-card__description");
+const cardDescription = document.querySelector(".cart-card__empty");
 const cardItem = document.querySelector(".cart-card__item");
 const checkoutBtn = document.querySelector(".cart-card__checkout");
-const productQty = document.querySelector(
-  ".cart-card__product-quantity"
-);
+const productQty = document.querySelector(".cart-card__product-quantity");
 const thumbnails = document.querySelectorAll(".product-content__thumbnail");
 const carouselThumbnails = document.querySelectorAll(".carousel__thumbnail");
 const dimmer = document.querySelector(".dimmer");
-const total = document.querySelector(
-  ".cart-card__product-total"
-);
+const total = document.querySelector(".cart-card__product-total");
 const carousel = document.querySelector(".carousel");
 const closeBtn = document.querySelector(".carousel__close");
 const spotlightImage = document.querySelector(
@@ -31,6 +27,8 @@ const carouselSpotlightImage = document.querySelector(
 );
 const nextBtn = document.querySelector(".carousel__next");
 const previousBtn = document.querySelector(".carousel__previous");
+const hamburgerBtn = document.querySelector(".nav__hamburger-icon");
+const menuCloseBtn = document.querySelector(".sidenav__close");
 
 function openCartCard() {
   if (!cartOpen) {
@@ -135,6 +133,7 @@ function closeSpotlight() {
 
 function nextPhoto() {
   photoIndex = (photoIndex % 4) + 1;
+  console.log(photoIndex);
   carouselSpotlightImage.src = `images/image-product-${photoIndex}.jpg`;
   changeActiveCarouselThumbnail();
 }
@@ -158,6 +157,16 @@ function changeActiveCarouselThumbnail() {
   });
 }
 
+function openNav() {
+  document.querySelector(".sidenav").style.width = "15rem";
+  dimmer.style.display = "block";
+}
+
+function closeNav() {
+  document.querySelector(".sidenav").style.width = "0";
+  dimmer.style.display = "none";
+}
+
 cartBtn.addEventListener("click", openCartCard);
 addToCartBtn.addEventListener("click", addToCart);
 deleteBtn.addEventListener("click", removeFromCart);
@@ -171,3 +180,6 @@ closeBtn.addEventListener("click", closeSpotlight);
 spotlightImage.addEventListener("click", openSpotlight);
 nextBtn.addEventListener("click", nextPhoto);
 previousBtn.addEventListener("click", previousPhoto);
+checkoutBtn.addEventListener("click", checkout);
+hamburgerBtn.addEventListener("click", openNav);
+menuCloseBtn.addEventListener("click", closeNav);
