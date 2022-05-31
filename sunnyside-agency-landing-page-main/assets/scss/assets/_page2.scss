@@ -1,0 +1,67 @@
+@import "style";
+
+.page2 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80vh;
+  @media screen and (min-width: 56.25rem) {
+    height: 60vh;
+  }
+
+  &__bg-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @media screen and (min-width: 56.25rem) {
+      width: 50%;
+    }
+  }
+  &__bg-image--right {
+    @media screen and (min-width: 56.25rem) {
+      top: -100%;
+      left: 50%;
+    }
+  }
+
+  &__text-content {
+    position: absolute;
+    box-sizing: border-box;
+    margin: 1.25rem;
+    top: 60%;
+    text-align: center;
+    @media screen and (min-width: 56.25rem) {
+      width: 25%;
+      left: 10%;
+    }
+  }
+
+  &__text-content--right {
+    @media screen and (min-width: 56.25rem) {
+      top: -40%;
+      left: 61%;
+    }
+  }
+
+  &__title {
+    color: $dark-desaturated-cyan;
+    font-size: 2rem;
+    font-family: $font-fraunces;
+    font-weight: 700;
+    @media screen and (min-width: 56.25rem) {
+      font-size: 2vw;
+    }
+  }
+
+  &__description {
+    color: $dark-desaturated-cyan;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    @media screen and (min-width: 56.25rem) {
+      font-size: 1.2vw;
+    }
+  }
+}
