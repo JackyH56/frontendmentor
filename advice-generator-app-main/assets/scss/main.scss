@@ -13,6 +13,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .card {
@@ -22,7 +24,7 @@ body {
 
   &__content {
     position: relative;
-    padding: 4rem;
+    padding: 3rem;
     height: 18.75rem;
     border-radius: 1.25rem;
     background-color: $dark-grayish-blue;
@@ -36,9 +38,12 @@ body {
 
   &__advice-text {
     font-size: 1.75rem;
+    @media screen {
+      font-size: 1.25rem;
+    }
     color: $light-cyan;
   }
-  
+
   &__mobile-divider {
     display: block;
     width: 100%;
