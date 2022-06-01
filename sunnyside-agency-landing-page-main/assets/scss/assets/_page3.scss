@@ -1,6 +1,6 @@
 .page3 {
   text-align: center;
-  padding: 4rem 1rem;
+  margin: 5rem 1rem;
   &__title {
     text-transform: uppercase;
     font-family: $font-fraunces;
@@ -9,14 +9,37 @@
     font-weight: 700;
     color: $grayish-blue;
   }
+  @media screen and (min-width: 56.25rem) {
+    position: relative;
+    top: -60vh;
+    overflow-y: hidden;
+    height: 85vh;
+  }
+}
+
+.testimonials {
+  @media screen and (min-width: 56.25rem) {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
 }
 
 .testimonial {
   padding: 2rem 0.5rem;
+  @media screen and (min-width: 56.25rem) {
+    float: left;
+    width: 25%;
+  }
 
   &__image {
     border-radius: 50%;
     height: 4rem;
+    @media screen and (min-width: 56.25rem) {
+      width: 30%;
+      height: auto;
+      margin-bottom: 5rem;
+    }
   }
 
   &__text {
@@ -24,14 +47,24 @@
     line-height: 2rem;
     font-size: 1.125rem;
     font-weight: 600;
+    @media screen and (min-width: 56.25rem) {
+      font-size: 1.25vw;
+      margin-bottom: 5rem;
+    }
   }
 
   &__name {
     font-family: $font-fraunces;
     font-weight: 900;
+    @media screen and (min-width: 56.25rem) {
+      font-size: 1.25vw;
+    }
   }
 
   &__position {
     color: $grayish-blue;
+    @media screen and (min-width: 56.25rem) {
+      font-size: 1vw;
+    }
   }
 }
