@@ -34,6 +34,7 @@ body {
   padding: 0.5rem 1.25rem;
   text-decoration: none;
   font-size: 1rem;
+  margin-top: 1rem;
 }
 .topnav a:hover {
   font-weight: bold;
