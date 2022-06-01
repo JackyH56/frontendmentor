@@ -1,6 +1,8 @@
 .page3 {
+  position: relative;
   text-align: center;
-  margin: 5rem 1rem;
+  box-sizing: border-box;
+  padding: 7rem 0;
   &__title {
     text-transform: uppercase;
     font-family: $font-fraunces;
@@ -10,10 +12,7 @@
     color: $grayish-blue;
   }
   @media screen and (min-width: 56.25rem) {
-    position: relative;
-    top: -60vh;
-    overflow-y: hidden;
-    height: 85vh;
+    height: 100vh;
   }
 }
 
@@ -21,7 +20,6 @@
   @media screen and (min-width: 56.25rem) {
     display: flex;
     justify-content: center;
-    margin-top: 3rem;
   }
 }
 
@@ -38,7 +36,7 @@
     @media screen and (min-width: 56.25rem) {
       width: 30%;
       height: auto;
-      margin-bottom: 5rem;
+      margin-bottom: 3rem;
     }
   }
 
