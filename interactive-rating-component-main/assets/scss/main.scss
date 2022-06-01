@@ -27,7 +27,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background-color: $dark-blue;
+    background-image: radial-gradient(at top, $dark-grey, $dark-blue);
+    // background-color: $dark-blue;
     flex-direction: column;
     padding: 1.875rem;
     border-radius: 5%;
