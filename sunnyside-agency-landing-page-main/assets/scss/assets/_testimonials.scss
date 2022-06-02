@@ -1,0 +1,65 @@
+@import "style";
+
+.testimonials {
+  width: 100vw;
+  height: 160vh;
+  padding: 4.125rem 2.125rem;
+  text-align: center;
+
+  @media screen and (min-width: 56.25rem) {
+    padding: 5rem;
+    height: 100vh;
+
+  }
+  &__title {
+    text-transform: uppercase;
+    font-family: $font-fraunces;
+    letter-spacing: 0.2rem;
+    font-size: 5vw;
+    font-weight: 700;
+    color: $grayish-blue;
+    @media screen and (min-width: 56.25rem) {
+      font-size: 1.5vw;
+    }
+  }
+}
+
+.testimonial-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  @media screen and (min-width: 56.25rem) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.testimonial {
+  padding: 2rem 0.675rem;
+
+  &__image {
+    border-radius: 50%;
+    width: 4rem;
+    height: auto;
+    margin-bottom: 4rem;
+  }
+
+  &__text {
+    color: $very-dark-grayish-blue;
+    line-height: 2;
+    font-size: 4vw;
+    font-weight: 600;
+    margin-bottom: 5rem;
+
+    @media screen and (min-width: 56.25rem) {
+      font-size: 1.325vw;
+    }
+  }
+
+  &__name {
+    font-family: $font-fraunces;
+    font-weight: 900;
+  }
+
+  &__job-title {
+    color: $grayish-blue;
+  }
+}

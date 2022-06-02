@@ -18,30 +18,34 @@ body {
 }
 
 .card {
-  width: 40%;
-  min-width: 22rem;
+  width: calc(100% - 2rem);
+  max-width: 34rem;
   text-align: center;
 
   &__content {
     position: relative;
     padding: 3rem;
-    height: 18.75rem;
+    // height: 18.75rem;
     border-radius: 1.25rem;
     background-color: $dark-grayish-blue;
     text-align: center;
   }
 
-  &__advice-number-text {
+  &__eyebrow {
     color: $neon-green;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
     margin-bottom: 2rem;
   }
 
   &__advice-text {
     font-size: 1.75rem;
+    color: $light-cyan;
+
     @media screen {
       font-size: 1.25rem;
     }
-    color: $light-cyan;
   }
 
   &__mobile-divider {
@@ -69,8 +73,10 @@ body {
   &__button {
     position: absolute;
     bottom: -1.5rem;
-    left: calc(50% - 1.5rem);
-    padding: 0.625rem;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 0;
+    padding: 0;
     border-radius: 50%;
     background-color: hsl(150, 100%, 66%);
     border: none;
@@ -78,6 +84,11 @@ body {
 
     &:hover {
       box-shadow: 0 0 1rem hsl(150, 100%, 66%);
+    }
+
+    &-image {
+      width: 1.25rem;
+      padding: 1rem;
     }
   }
 }

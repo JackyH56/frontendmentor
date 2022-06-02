@@ -29,170 +29,180 @@
   </style>
 </head>
 
-<bo>
-  <div class="header">
-    <div class="header__topnav">
-      <div class="header__logo"><img src="images/logo.svg"></div>
-      <a href="#" class="header__hamburger-icon">
-        <img src="images/icon-hamburger.svg">
-      </a>
-      <div class="header__topnav-links">
-        <a href="#" class="header__topnav-link">About</a>
-        <a href="#" class="header__topnav-link">Services</a>
-        <a href="#" class="header__topnav-link">Projects</a>
-        <a href="#" class="header__topnav-link header__topnav-contact-link">Contact</a>
-      </div>
-    </div>
+<body>
+  <header class="header">
+    <div class="header__logo"><img src="images/logo.svg" class="header__logo-image"></div>
+    <nav class="header__nav">
+      <a href="#" class="header__nav-link">About</a>
+      <a href="#" class="header__nav-link">Services</a>
+      <a href="#" class="header__nav-link">Projects</a>
+      <a href="#" class="header__nav-link header__nav-link--contact">Contact</a>
+    </nav>
+    <img src="images/icon-hamburger.svg" class="header__hamburger-icon">
 
     <ul class="header__menu">
       <li><a href="#" class="header__menu-link">About</a></li>
       <li><a href="#" class="header__menu-link">Services</a></li>
       <li><a href="#" class="header__menu-link">Projects</a></li>
-      <li><a href="#" class="header__menu-link header__contact-link">Contact</a></li>
+      <li><a href="#" class="header__menu-link header__menu-link--contact">Contact</a></li>
     </ul>
+  </header>
+
+  <section class="hero">
     <picture>
       <source media="(min-width: 40rem)" srcset="images/desktop/image-header.jpg">
-      <img class="header__bg-image" src="images/mobile/image-header.jpg" alt="orange">
+      <img class="hero__bg-image" src="images/mobile/image-header.jpg" alt="orange">
     </picture>
-    <h1 class="header__title">We are creatives</h1>
-    <img class="header__arrow-down" src="images/icon-arrow-down.svg">
-  </div>
-
-  <div class="page1">
-    <picture>
-      <source media="(min-width: 40rem)" srcset="images/desktop/image-transform.jpg">
-      <img class="page1__bg-image page1__bg-image--right" src="images/mobile/image-transform.jpg">
-    </picture>
-    <div class="page1__text-content">
-      <h2 class="page1__title">Transform your brand</h2>
-      <p class="page1__description">We are a full-service creative agency specializing in helping brands grow fast.
-        Engage your clients through compelling visuals that do most of the marketing for you.</p>
-      <a href="#" class="learn-more-yellow">Learn more</a>
+    <div class="hero__text">
+      <h1 class="hero__title">We are creatives</h1>
+      <img class="hero__arrow-down" src="images/icon-arrow-down.svg">
     </div>
-  </div>
-
-  <div class="page1">
-    <picture>
-      <source media="(min-width: 40rem)" srcset="images/desktop/image-stand-out.jpg">
-      <img class="page1__bg-image" src="images/mobile/image-stand-out.jpg">
-    </picture>
-    <div class="page1__text-content page1__text-content-right">
-      <h2 class="page1__title">Stand out to the right audience</h2>
-      <p class="page1__description">Using a collaborative formula of designers, researchers, photographers,
-        videographers,
-        and copywriters, we’ll build
-        and extend your brand in digital places.</p>
-      <!-- <a href="#" class="learn-more">Learn more</a> -->
-      <a href="#" class="learn-more-pink">Learn more</a>
+  </section>
+  <section class="blog">
+    <div class="blog-post">
+      <picture>
+        <source media="(min-width: 40rem)" srcset="images/desktop/image-transform.jpg">
+        <img class="blog-post__image" src="images/mobile/image-transform.jpg">
+      </picture>
+      <div class="blog-post__text blog-post__text--alt">
+        <h2 class="blog-post__title">Transform your brand</h2>
+        <p class="blog-post__description">We are a full-service creative agency specializing in helping brands grow
+          fast.
+          Engage your clients through compelling visuals that do most of the marketing for you.</p>
+        <a href="#" class="learn-more learn-more--yellow">Learn more</a>
+      </div>
     </div>
-  </div>
-  <div class="page2">
-    <div class="page2__graphic">
+
+    <div class="blog-post">
+      <picture>
+        <source media="(min-width: 40rem)" srcset="images/desktop/image-stand-out.jpg">
+        <img class="blog-post__image" src="images/mobile/image-stand-out.jpg">
+      </picture>
+      <div class="blog-post__text">
+        <h2 class="blog-post__title">Stand out to the right audience</h2>
+        <p class="blog-post__description">Using a collaborative formula of designers, researchers, photographers,
+          videographers,
+          and copywriters, we’ll build
+          and extend your brand in digital places.</p>
+        <a href="#" class="learn-more learn-more--pink">Learn more</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="service-card">
       <picture>
         <source media="(min-width: 40rem)" srcset="images/desktop/image-graphic-design.jpg">
-        <img class="page2__graphic-bg-image" src="images/mobile/image-graphic-design.jpg">
+        <img class="service-card__bg-image" src="images/mobile/image-graphic-design.jpg">
       </picture>
-      <div class="page2__graphic-text-content">
-        <h2 class="page2__title">Graphic design</h2>
-        <p class="page2__description">Great design makes you memorable. We deliver artwork that underscores your brand
+      <div class="service-card__text">
+        <h2 class="service-card__title">Graphic design</h2>
+        <p class="service-card__description">Great design makes you memorable. We deliver artwork that underscores your
+          brand
           message and captures potential
           clients’ attention.</p>
       </div>
     </div>
 
-    <div class="page2__photography">
+    <div class="service-card">
       <picture>
         <source media="(min-width: 40rem)" srcset="images/desktop/image-photography.jpg">
-        <img class="page2__photography-bg-image" src="images/mobile/image-photography.jpg">
+        <img class="service-card__bg-image" src="images/mobile/image-photography.jpg">
       </picture>
-      <div class="page2__photography-text-content">
-        <h2 class="page2__title">Photography</h2>
-        <p class="page2__description">Increase your credibility by getting the most stunning, high-quality photos that
+      <div class="service-card__text">
+        <h2 class="service-card__title">Photography</h2>
+        <p class="service-card__description">Increase your credibility by getting the most stunning, high-quality photos
+          that
           improve your business image.
         </p>
       </div>
     </div>
-  </div>
+  </section>
 
-
-  <div class="page3">
-    <h2 class="page3__title">Client testimonials</h2>
-
-    <div class="testimonials">
+   <section class="testimonials">
+    <h2 class="testimonials__title">Client Testimonials</h2>
+    <div class="testimonial-wrapper">
       <div class="testimonial">
         <img class="testimonial__image" src="images/image-emily.jpg">
-        <p class="testimonial__text">
+        <div class="testimonial__text">
           We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always
           hit.
-        </p>
-        <p class="testimonial__name">Emily R.</p>
-        <span class="testimonial__position">Marketing Director</span>
+        </div>
+        <div class="testimonial__name">
+          Emily R.
+        </div>
+        <div class="testimonial__job-title">
+          Marketing Director
+        </div>
       </div>
 
       <div class="testimonial">
         <img class="testimonial__image" src="images/image-thomas.jpg">
-        <p class="testimonial__text">
+        <div class="testimonial__text">
           Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and
           enjoyable
           experience.
-        </p>
-        <p class="testimonial__name">Thomas S.</p>
-        <span class="testimonial__position">Chief Operating Officer</span>
+        </div>
+        <div class="testimonial__name">
+          Thomas S.
+        </div>
+        <div class="testimonial__job-title">
+          Chief Operating Officer
+        </div>
       </div>
 
       <div class="testimonial">
         <img class="testimonial__image" src="images/image-jennie.jpg">
-        <p class="testimonial__text">
+        <div class="testimonial__text">
           Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
-        </p>
-        <p class="testimonial__name">Jennie F.</p>
-        <span class="testimonial__position">Business Owner</span>
+        </div>
+        <div class="testimonial__name">
+          Jennie F.
+        </div>
+        <div class="testimonial__job-title">
+          Business Owner
+        </div>
       </div>
-    </div>
-  </div>
+  </section>
 
-  <div class="page4">
-    <div class="gallery">
-      <picture>
-        <source media="(min-width: 40rem)" srcset="images/desktop/image-gallery-milkbottles.jpg">
-        <img class="gallery__image" src="images/mobile/image-gallery-milkbottles.jpg">
-      </picture>
-      <picture>
-        <source media="(min-width: 40rem)" srcset="images/desktop/image-gallery-orange.jpg">
-        <img class="gallery__image" src="images/mobile/image-gallery-orange.jpg">
-      </picture>
-      <picture>
-        <source media="(min-width: 40rem)" srcset="images/desktop/image-gallery-cone.jpg">
-        <img class="gallery__image" src="images/mobile/image-gallery-cone.jpg">
-      </picture>
-      <picture>
-        <source media="(min-width: 40rem)" srcset="images/desktop/image-gallery-sugarcubes.jpg">
-        <img class="gallery__image" src="images/mobile/image-gallery-sugar-cubes.jpg">
-      </picture>
-    </div>
-    <div class="contact">
-      <img class="contact__logo" src="images/logo.svg"></img>
-      <div class="contact__links">
-        <a href="#" class="contact__link">About</a>
-        <a href="#" class="contact__link">Services</a>
-        <a href="#" class="contact__link">Projects</a>
-      </div>
-      <div class="contact__social-media">
-        <a href="#" class="contact__icon"><img src="images/icon-facebook.svg"></a>
-        <a href="#" class="contact__icon"><img src="images/icon-instagram.svg"></a>
-        <a href="#" class="contact__icon"><img src="images/icon-twitter.svg"></a>
-        <a href="#" class="contact__icon"><img src="images/icon-pinterest.svg"></a>
-      </div>
-    </div>
+  <section class="gallery">
+    <picture>
+      <source media="(min-width: 40rem)" srcset="images/desktop/image-gallery-milkbottles.jpg">
+      <img class="gallery__image" src="images/mobile/image-gallery-milkbottles.jpg">
+    </picture>
 
-  </div>
-  </div>
+    <picture>
+      <source media="(min-width: 40rem)" srcset="images/desktop/image-gallery-orange.jpg">
+      <img class="gallery__image" src="images/mobile/image-gallery-orange.jpg">
+    </picture>
 
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+    <picture>
+      <source media="(min-width: 40rem)" srcset="images/desktop/image-gallery-cone.jpg">
+      <img class="gallery__image" src="images/mobile/image-gallery-cone.jpg">
+    </picture>
+
+    <picture>
+      <source media="(min-width: 40rem)" srcset="images/desktop/image-gallery-sugarcubes.jpg">
+      <img class="gallery__image" src="images/mobile/image-gallery-sugar-cubes.jpg">
+    </picture>
+  </section>
+
+
+  <footer class="footer">
+    <img class="footer__logo" src="images/logo.svg"></img>
+    <nav class="footer__nav">
+      <a href="#" class="footer__link">About</a>
+      <a href="#" class="footer__link">Services</a>
+      <a href="#" class="footer__link">Projects</a>
+    </nav>
+    <div class="footer__socials">
+      <a href="#" class="footer__icon"><img src="images/icon-facebook.svg"></a>
+      <a href="#" class="footer__icon"><img src="images/icon-instagram.svg"></a>
+      <a href="#" class="footer__icon"><img src="images/icon-twitter.svg"></a>
+      <a href="#" class="footer__icon"><img src="images/icon-pinterest.svg"></a>
+    </div>
+  </footer>
   <script src="script.js"></script>
-  </body>
+</body>
 
 </html>

@@ -1,69 +1,64 @@
 @import "style";
 
 .header {
-  position: relative;
+  position: absolute;
   top: 0;
-  left: 0;
   width: 100vw;
-  height: 80vh;
+  height: 50%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow-x: hidden;
+  z-index: 1;
+  padding: 2rem 1.5rem;
 
   @media screen and (min-width: 56.25rem) {
-    height: 100vh;
-  }
-
-  &__topnav {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    z-index: 1;
+    padding: 3.125rem 2.5rem;
   }
 
   &__logo {
-    align-self: flex-start;
     background-color: none;
     border: none;
-    margin: 2rem 0 0 1rem;
     cursor: pointer;
   }
 
+  &__nav {
+    display: none;
+    @media screen and (min-width: 56.25rem) {
+      display: flex;
+    }
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    margin-left: 1.75rem;
+    padding: 1.25rem 1.75rem;
+    color: $white;
+
+    &--contact {
+      background-color: $white;
+      color: $dark-desaturated-cyan;
+      border-radius: 2rem;
+      &:hover {
+        background-color: $light-blue;
+        color: $white;
+      }
+    }
+  }
+
   &__hamburger-icon {
-    margin: 2rem 1rem 0 auto;
+    display: block;
     @media screen and (min-width: 56.25rem) {
       display: none;
     }
   }
 
-  &__topnav-links {
-    display: none;
-    justify-content: flex-end;
-    margin: 2rem 2rem 0 0;
-    @media screen and (min-width: 56.25rem) {
-      display: flex;
-    }
-  }
-  &__topnav-link {
-    text-decoration: none;
-    padding: 0.75rem 1.25rem;
-    color: $white;
-  }
-
-  &__topnav-contact-link {
-    background-color: $white;
-    color: $dark-desaturated-cyan;
-    border-radius: 2rem;
-    &:hover {
-      background-color: $light-blue;
-      color: $white;
-    }
-  }
-
   &__menu {
     display: none;
-    z-index: 2;
     position: absolute;
     top: 5rem;
-    right: 1rem;
+    right: 1.5rem;
     width: 90%;
     background-color: $white;
     text-align: center;
@@ -87,42 +82,12 @@
     text-decoration: none;
     color: $dark-grayish-blue;
     margin: 1rem;
-  }
-  &__contact-link {
-    padding: 1rem 1.5rem;
-    border-radius: 1.5rem;
-    background-color: $yellow;
-    color: $very-dark-desaturated-blue;
-  }
 
-  &__bg-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  &__title {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 5rem;
-    text-align: center;
-    color: $white;
-    font-weight: 700;
-    font-family: $font-fraunces;
-  }
-
-  &__arrow-down {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-
-    @media screen and (min-width: 66.9rem) {
-      top: 40%;
+    &--contact-link {
+      padding: 1rem 1.5rem;
+      border-radius: 1.5rem;
+      background-color: $yellow;
+      color: $very-dark-desaturated-blue;
     }
   }
 }
