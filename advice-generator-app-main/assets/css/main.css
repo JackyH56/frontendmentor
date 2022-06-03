@@ -1,33 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: hsl(218deg, 23%, 16%);
   font-family: "Manrope", sans-serif;
   font-weight: 800;
   width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+  height: 100vh;
 }
 
 .card {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
   width: calc(100% - 2rem);
   max-width: 34rem;
   text-align: center;
 }
+@media screen and (min-width: 40rem) {
+  .card {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 .card__content {
   position: relative;
-  padding: 3rem;
-  border-radius: 1.25rem;
+  padding: 2.5rem 1.25rem;
+  border-radius: 0.625rem;
   background-color: hsl(217deg, 19%, 24%);
   text-align: center;
 }
+@media screen and (min-width: 40rem) {
+  .card__content {
+    padding: 3rem;
+  }
+}
 .card__eyebrow {
   color: hsl(150deg, 100%, 66%);
-  font-weight: normal;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.125rem;
+  letter-spacing: 0.1875rem;
+  font-size: 0.75rem;
   margin-bottom: 2rem;
 }
 .card__advice-text {
@@ -59,7 +77,7 @@ body {
 }
 .card__button {
   position: absolute;
-  bottom: -1.5rem;
+  bottom: -2rem;
   left: 50%;
   transform: translateX(-50%);
   line-height: 0;
@@ -73,8 +91,7 @@ body {
   box-shadow: 0 0 1rem hsl(150deg, 100%, 66%);
 }
 .card__button-image {
-  width: 1.25rem;
-  padding: 1rem;
+  padding: 1.25rem;
 }
 
 /*# sourceMappingURL=main.css.map */
