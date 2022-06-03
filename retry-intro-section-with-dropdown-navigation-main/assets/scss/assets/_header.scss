@@ -1,0 +1,99 @@
+@import "style";
+
+.header {
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.25rem 2.5rem 0;
+
+  &__left {
+    :not(:first-child) {
+      display: none;
+    }
+
+    @media screen and (min-width: 40rem) {
+      :not(:first-child) {
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+    }
+  }
+  &__right {
+    display: none;
+    @media screen and (min-width: 40rem) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__link {
+    padding: 0.875rem 1.25rem;
+    text-decoration: none;
+    color: $medium-gray;
+
+    &:hover {
+      color: $almost-black;
+    }
+
+    &--logo {
+      margin-right: 0.875rem;
+    }
+
+    &--register {
+      border: 0.0625rem solid $almost-black;
+      border-radius: 1rem;
+      margin-left: 0.875rem;
+    }
+  }
+}
+
+.features-card {
+  display: none;
+  height: 10rem;
+  width: 9.5rem;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: absolute;
+  background-color: $almost-white;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 3rem; //How to align this with bottom of nav
+  left: 5rem; //How to align this with right of features link
+  border-radius: 0.5rem;
+
+  &__link {
+    text-decoration: none;
+    color: $medium-gray;
+
+    &-icon {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.company-card {
+  display: none;
+  width: 7.25rem;
+  height: 8.125rem;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: absolute;
+  background-color: $almost-white;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 3rem; //How to align this with bottom of nav
+  left: 17rem; //How to align this with left of company link
+  border-radius: 0.5rem;
+
+  &__link {
+    text-decoration: none;
+    color: $medium-gray;
+  }
+}

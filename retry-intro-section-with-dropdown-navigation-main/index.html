@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="header">
+      <div class="header__left">
+        <img class="header__link header__link--logo" src="images/logo.svg" />
+        <a href="#" class="header__link header__link--features"
+          >Features<img src="images/icon-arrow-down.svg"
+        /></a>
+        <div class="features-card">
+          <a href="#" class="features-card__link"
+            ><img
+              class="features-card__link-icon"
+              src="images/icon-todo.svg"
+            />Todo List</a
+          >
+          <a href="#" class="features-card__link"
+            ><img
+              class="features-card__link-icon"
+              src="images/icon-calendar.svg"
+            />Calendars</a
+          >
+          <a href="#" class="features-card__link"
+            ><img
+              class="features-card__link-icon"
+              src="images/icon-reminders.svg"
+            />Reminders</a
+          >
+          <a href="#" class="features-card__link"
+            ><img
+              class="features-card__link-icon"
+              src="images/icon-planning.svg"
+            />Planning</a
+          >
+        </div>
+        <a href="#" class="header__link header__link--company"
+          >Company<img src="images/icon-arrow-down.svg"
+        /></a>
+        <div class="company-card">
+          <a href="#" class="company-card__link">History</a>
+          <a href="#" class="company-card__link">Our Team</a>
+          <a href="#" class="company-card__link">Blog</a>
+        </div>
+        <a href="#" class="header__link">Careers</a>
+        <a href="#" class="header__link">About</a>
+      </div>
+      <div class="header__right">
+        <a href="#" class="header__link">Login</a>
+        <a href="#" class="header__link header__link--register">Register</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="text">
+        <div class="text__title">Make remote work</div>
+        <div class="text__description">
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </div>
+        <div class="text__learn-more">Learn more</div>
+        <div class="text__clients">
+          <img class="text__client" src="images/client-databiz.svg" />
+          <img class="text__client" src="images/client-audiophile.svg" />
+          <img class="text__client" src="images/client-meet.svg" />
+          <img class="text__client" src="images/client-maker.svg" />
+        </div>
+      </div>
+      <picture class="hero__picture">
+        <source
+          media="(min-width: 40rem)"
+          srcset="images/image-hero-desktop.png"
+        />
+        <img
+          class="hero__picture-image"
+          src="images/image-hero-mobile.png"
+          alt="hero"
+        />
+      </picture>
+    </section>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>
