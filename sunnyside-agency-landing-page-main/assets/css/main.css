@@ -165,19 +165,20 @@ h2 {
 .blog-post__image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 .blog-post__text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  padding: 1rem;
+  padding: 5rem 1.75rem;
   text-align: center;
 }
 @media screen and (min-width: 56.25rem) {
   .blog-post__text {
     padding: 9rem 7.5rem 9rem 10rem;
+    justify-content: center;
     align-items: flex-start;
     text-align: left;
   }
@@ -192,7 +193,7 @@ h2 {
 }
 .blog-post__title {
   color: hsl(212deg, 27%, 19%);
-  font-size: 10vw;
+  font-size: 2rem;
   font-family: "Fraunces", serif;
   font-weight: 900;
 }
@@ -203,7 +204,7 @@ h2 {
 }
 .blog-post__description {
   color: hsl(232deg, 10%, 55%);
-  font-size: 4.75vw;
+  font-size: 1.0625rem;
   line-height: 1.5;
   font-weight: 600;
   margin-top: 2.75rem;
@@ -220,7 +221,7 @@ h2 {
   color: hsl(212deg, 27%, 19%);
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 5vw;
+  font-size: 1.0625rem;
   font-family: "Fraunces", serif;
   font-weight: 700;
   cursor: pointer;
@@ -259,10 +260,12 @@ h2 {
   height: 160vh;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 80vh 80vh;
 }
 @media screen and (min-width: 56.25rem) {
   .services {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 75vh;
     height: 75vh;
   }
 }
@@ -275,10 +278,12 @@ h2 {
   width: 100%;
   height: 100%;
   display: flex;
+  overflow: hidden;
 }
 .service-card__bg-image {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: fill;
 }
 .service-card__text {
   position: absolute;
@@ -324,7 +329,8 @@ h2 {
 }
 @media screen and (min-width: 56.25rem) {
   .testimonials {
-    padding: 5rem;
+    padding: 10rem 5rem;
+    margin: auto;
     height: 100vh;
   }
 }
@@ -335,38 +341,56 @@ h2 {
   font-size: 5vw;
   font-weight: 700;
   color: hsl(210deg, 4%, 67%);
+  margin-bottom: 4rem;
 }
 @media screen and (min-width: 56.25rem) {
   .testimonials__title {
-    font-size: 1.5vw;
+    font-size: 1.75vw;
+    letter-spacing: 0.25rem;
+    margin-bottom: 3rem;
   }
 }
 
 .testimonial-wrapper {
   display: grid;
+  height: fit-content;
   grid-template-columns: 1fr;
+  grid-template-rows: 33.333%;
 }
 @media screen and (min-width: 56.25rem) {
   .testimonial-wrapper {
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
   }
 }
 
-.testimonial {
-  padding: 2rem 0.675rem;
+@media screen and (min-width: 56.25rem) {
+  .testimonial {
+    padding: 2rem 0.675rem;
+  }
 }
 .testimonial__image {
   border-radius: 50%;
   width: 4rem;
   height: auto;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 56.25rem) {
+  .testimonial__image {
+    margin-bottom: 3.5rem;
+  }
 }
 .testimonial__text {
   color: hsl(213deg, 9%, 39%);
   line-height: 2;
-  font-size: 4vw;
+  font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
+}
+@media screen and (min-width: 56.25rem) {
+  .testimonial__text {
+    margin-bottom: 4.5rem;
+  }
 }
 @media screen and (min-width: 56.25rem) {
   .testimonial__text {
@@ -376,6 +400,12 @@ h2 {
 .testimonial__name {
   font-family: "Fraunces", serif;
   font-weight: 900;
+  font-size: 1rem;
+}
+@media screen and (min-width: 56.25rem) {
+  .testimonial__name {
+    font-size: 1.25rem;
+  }
 }
 .testimonial__job-title {
   color: hsl(210deg, 4%, 67%);
@@ -386,10 +416,12 @@ h2 {
   height: 55vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50% 50%;
 }
 @media screen and (min-width: 56.25rem) {
   .gallery {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100%;
   }
 }
 .gallery picture {
@@ -397,7 +429,8 @@ h2 {
 }
 .gallery__image {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: fill;
 }
 
 .footer {
@@ -420,7 +453,7 @@ h2 {
 }
 @media screen and (min-width: 56.25rem) {
   .footer__logo {
-    width: 20%;
+    width: 15%;
   }
 }
 .footer__nav {
@@ -450,7 +483,7 @@ h2 {
 }
 @media screen and (min-width: 56.25rem) {
   .footer__socials {
-    width: 15%;
+    width: 12.5%;
   }
 }
 
