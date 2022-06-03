@@ -20,6 +20,7 @@ body {
   width: calc(100% - 2rem);
   max-width: 34rem;
   text-align: center;
+  box-shadow: 0 1rem 1rem 0rem rgba(16, 19, 25, 0.1);
 }
 @media screen and (min-width: 40rem) {
   .card {

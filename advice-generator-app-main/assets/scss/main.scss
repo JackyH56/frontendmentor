@@ -3,6 +3,8 @@ $neon-green: hsl(150, 100%, 66%);
 $grayish-blue: hsl(217, 19%, 38%);
 $dark-grayish-blue: hsl(217, 19%, 24%);
 $dark-blue: hsl(218, 23%, 16%);
+$very-dark-blue: hsl(218, 23%, 8%);
+
 * {
   margin: 0;
   padding: 0;
@@ -25,10 +27,11 @@ body {
   width: calc(100% - 2rem);
   max-width: 34rem;
   text-align: center;
+  box-shadow: 0 1rem 1rem 0rem rgba($very-dark-blue, 0.1);
 
   @media screen and (min-width: 40rem) {
-    top:50%;
-    left:50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
   }
 
