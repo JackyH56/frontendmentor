@@ -6,9 +6,16 @@ $dark-grey: hsl(214, 12%, 23%);
 $dark-blue: hsl(213, 19%, 18%);
 $very-dark-blue: hsl(216, 12%, 8%);
 
+$radial-top-color: rgb(36, 42, 51);
+$radial-bottom-color: rgb(24, 30, 39);
+
 $font-family: "Overpass", sans-serif;
 $font-size: 0.9375rem;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 html,
 body {
   background-color: $very-dark-blue;
@@ -19,36 +26,39 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-self: center;
   height: 100%;
 
   &__content {
-    width: 21.875rem;
+    max-width: 25rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background-image: radial-gradient(at top, $dark-grey, $dark-blue);
-    // background-color: $dark-blue;
-    flex-direction: column;
-    padding: 1.875rem;
+    background-image: radial-gradient(
+      at top,
+      $radial-top-color,
+      $radial-bottom-color
+    );
+    padding: 1.75rem;
     border-radius: 1.5rem;
     margin: 0.625rem;
   }
 
   &__star {
-    background-color: $dark-grey;
+    background-color: $dark-blue;
     border: none;
     border-radius: 50%;
-    padding: 0.75rem;
+    padding: 1rem;
   }
   &__title {
     color: $white;
-    margin: 1.5rem 0 0;
-    font-size: 2rem;
-    font-weight: 700;
+    margin-top: 1.5rem;
+    font-size: 1.625rem;
+    font-weight: 400;
   }
   &__description {
     color: $medium-grey;
+    margin-top: 1rem;
     font-size: $font-size;
     line-height: 1.5;
   }
@@ -63,7 +73,7 @@ body {
   }
 
   &__button {
-    background-color: $dark-grey;
+    background-color: $dark-blue;
     color: $light-grey;
     padding: 0;
     width: 3rem;
@@ -86,14 +96,13 @@ body {
   }
 
   &__submit-button {
-    display: flex;
-    justify-content: center;
     width: 100%;
     border: none;
-    border-radius: 1.25rem;
+    border-radius: 2rem;
     text-align: center;
-    padding: 0.75rem;
-    font-family:  $font-family;
+    padding: 1.25rem;
+    font-family: $font-family;
+    font-size: $font-size;
     letter-spacing: 0.125rem;
     background-color: $orange;
     color: $white;
@@ -110,36 +119,44 @@ body {
   display: none;
   justify-content: center;
   align-items: center;
-  align-self: center;
   height: 100%;
 
   &__content {
-    width: 21.875rem;
+    max-width: 25rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $dark-blue;
-    flex-direction: column;
-    padding: 1.875rem;
+    background-image: radial-gradient(
+      at top,
+      $radial-top-color,
+      $radial-bottom-color
+    );
+    padding: 1.75rem;
     border-radius: 1.5rem;
+    margin: 0.625rem;
   }
 
   &__image {
+    width: 9.625rem;
+    height: auto;
     margin-bottom: 1.25rem;
   }
 
   &__rating-selected {
-    background-color: $dark-grey;
+    background-color: $dark-blue;
     color: $orange;
+    font-weight: 400;
+    font-size: 0.925rem;
     border-radius: 1.25rem;
-    margin-top: 0.75rem;
     padding: 0.625rem 1.25rem;
+    margin-bottom: 1.75rem;
   }
 
   &__title {
     color: $white;
     font-size: 1.75rem;
-    padding: 2rem 0 0.75rem;
+    margin-bottom: 1rem;
   }
 
   &__description {
