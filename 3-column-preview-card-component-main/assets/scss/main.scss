@@ -1,0 +1,108 @@
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+$transparent-white: hsla(0, 0%, 100%, 0.75); //Paragraphs
+$very-light-gray: hsl(0, 0%, 95%); // (background, headings, buttons)
+$font-cursive: "Big Shoulders Display", cursive;
+$font-regular: "Lexend Deca", sans-serif;
+$font-size: 0.9375rem; //15px
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100%;
+  background-color: $very-light-gray;
+  margin: 0;
+  padding: 5.5rem 1.5rem;
+  box-sizing: border-box;
+  font-family: $font-regular;
+  font-weight: 400;
+  font-size: $font-size;
+
+  @media screen and (min-width: 40rem) {
+    padding: 10rem 16.25rem;
+  }
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 33.333% 33.333% 33.333%;
+
+  @media screen and (min-width: 40rem) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+  }
+}
+
+.column {
+  padding: 3rem;
+
+  &__icon {
+    width: 4.375rem;
+    height: auto;
+    margin-bottom: 2.25rem;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-family: $font-cursive;
+    color: $very-light-gray;
+    margin-bottom: 2.25rem;
+  }
+
+  &__paragraph {
+    color: $transparent-white;
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+
+  &__learn-more-btn {
+    display: inline-block;
+    cursor: pointer;
+    background-color: $very-light-gray;
+    padding: 1.125rem 2rem;
+    border-radius: 1.875rem;
+
+    &-orange {
+      color: $bright-orange;
+    }
+
+    &-cyan {
+      color: $dark-cyan;
+    }
+
+    &-dark-cyan {
+      color: $very-dark-cyan;
+    }
+  }
+}
+
+.column-1 {
+  background-color: $bright-orange;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+
+  @media screen and (min-width: 40rem) {
+    border-bottom-left-radius: 0.5rem;
+    border-top-right-radius: 0;
+  }
+}
+
+.column-2 {
+  background-color: $dark-cyan;
+}
+
+.column-3 {
+  background-color: $very-dark-cyan;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  @media screen and (min-width: 40rem) {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.5rem;
+  }
+}
