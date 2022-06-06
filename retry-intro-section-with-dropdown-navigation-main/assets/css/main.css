@@ -4,7 +4,17 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 1.25rem 2.5rem 0;
+  padding: 0.75rem;
+}
+@media screen and (min-width: 40rem) {
+  .header {
+    padding: 1.25rem 2.5rem 0;
+  }
+}
+.header__left {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 .header__left :not(:first-child) {
   display: none;
@@ -12,17 +22,27 @@
 @media screen and (min-width: 40rem) {
   .header__left :not(:first-child) {
     display: flex;
-    align-items: center;
-    position: relative;
   }
 }
 .header__right {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.header__right :not(:first-child) {
   display: none;
 }
 @media screen and (min-width: 40rem) {
-  .header__right {
+  .header__right :not(:first-child) {
     display: flex;
-    align-items: center;
+  }
+}
+.header__right--hamburger {
+  display: flex;
+}
+@media screen and (min-width: 40rem) {
+  .header__right--hamburger {
+    display: none;
   }
 }
 .header__link {
@@ -41,22 +61,33 @@
   border-radius: 1rem;
   margin-left: 0.875rem;
 }
+.header__link-dropdown-arrow {
+  margin-left: 0.5rem;
+  width: 0.75rem;
+  height: auto;
+  object-fit: contain;
+}
 
 .features-card {
   display: none;
-  height: 10rem;
-  width: 9.5rem;
-  padding: 1rem;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  position: absolute;
-  background-color: hsl(0deg, 0%, 98%);
-  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  top: 3rem;
-  left: 5rem;
-  border-radius: 0.5rem;
+}
+@media screen and (min-width: 40rem) {
+  .features-card {
+    display: none;
+    height: 10rem;
+    width: 9.5rem;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: absolute;
+    background-color: hsl(0deg, 0%, 98%);
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 4rem;
+    left: 9rem;
+    border-radius: 0.5rem;
+  }
 }
 .features-card__link {
   text-decoration: none;
@@ -78,8 +109,8 @@
   background-color: hsl(0deg, 0%, 98%);
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
-  top: 3rem;
-  left: 17rem;
+  top: 4rem;
+  left: 20rem;
   border-radius: 0.5rem;
 }
 .company-card__link {
@@ -89,10 +120,15 @@
 
 .hero {
   width: 100%;
-  height: 90%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 100%;
+}
+@media screen and (min-width: 40rem) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+  }
 }
 .hero .text {
   height: 100%;
@@ -142,8 +178,8 @@
 
 html,
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: hsl(0deg, 0%, 98%);
   font-family: "Epilogue", sans-serif;
 }
